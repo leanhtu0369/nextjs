@@ -1,0 +1,80 @@
+html:has(.heart-box) {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-box {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#heart-draw {
+  position: relative;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  animation: animate 1.3s infinite;
+}
+
+#heart-draw:before,
+#heart-draw:after {
+  content: '';
+  position: absolute;
+  background: #ff5ca4;
+  width: 100px;
+  height: 160px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+#heart-draw:before {
+  left: 100px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#heart-draw:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-text {
+  color: rgb(15, 12, 225);
+  font-size: 31px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
