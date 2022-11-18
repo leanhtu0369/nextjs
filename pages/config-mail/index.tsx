@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {
   API_BASE_CONFIG_MAIL,
   OPERATING_COMPANY_SID,
-  VALUE_COOKIE_AUTH,
+  VALUE_COOKIE_AUTH
 } from '../../common/constant';
 import ConfigMailModel from '../../interfaces/ConfigMailModel';
 
